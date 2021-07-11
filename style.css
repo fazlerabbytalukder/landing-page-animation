@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00796b;
+}
+
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.outer-ring {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 6px solid rgb(170, 168, 168);
+  border-bottom: 6px solid rgb(170, 168, 168);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  position: absolute;
+  animation: rotatering 2s linear infinite;
+}
+.middle-ring {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border-top: 6px solid white;
+  border-bottom: 6px solid  white;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  position: absolute;
+  animation: rotatering 2s linear infinite reverse;
+}
+.inner-ring {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 6px solid rgb(170, 168, 168);
+  border-bottom: 6px solid rgb(170, 168, 168);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  position: absolute;
+  animation: rotatering 2s linear infinite;
+}
+
+.dot {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  animation: rotatering 2s linear infinite;
+}
+
+@keyframes rotatering {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
